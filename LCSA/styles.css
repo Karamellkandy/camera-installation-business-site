@@ -1,0 +1,289 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.logo-nav {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.navigation a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.hero {
+    position: relative;
+    color: white;
+}
+
+.hero .overlay { 
+    background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0)), 
+        url('Pictures/bb.jpg'); /* Ensure the image path is correct */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 70vh; /* Sets the section height to full viewport height */
+    flex-direction: column; /* Align text elements vertically */
+    display: flex; /* Ensures content alignment */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    text-align: center;
+    padding: 50px 20px;
+    color: white; /* Keeps the text readable over the background */
+}
+
+.hero.cctv .overlay {
+    background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0)), 
+        url('Pictures/CCTV.gif'); /* Replace with the actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero.access-control .overlay {
+    background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0)), 
+        url('Pictures/access-control.jpg'); /* Replace with the actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero.intercom .overlay {
+    background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0)), 
+        url('Pictures/Intercom.png'); /* Replace with the actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero.faqs .overlay {
+    background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0)), 
+        url('Pictures/FAQ-4.png'); /* Replace with the actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #8a82824f; /* Soft grey for aesthetics */
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 15px; /* Rounded corners for smooth design */
+    margin: 20px auto; /* Centered section with margin */
+    max-width: 900px; /* Restrict width for better readability */
+    position: relative; /* Required for pseudo-elements */
+}
+
+.about:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #333; /* Decorative bar above the section */
+    border-radius: 1px;
+}
+
+.about h2 {
+    font-size: 2rem; /* Larger, stylish heading */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.1rem; /* Slightly larger text for readability */
+    line-height: 1.6;
+    color: #555; /* Softer color for text */
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.service {
+    background: #fff;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.service button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service button:hover {
+    background-color: #555;
+}
+
+
+footer.contact {
+    background-color: #86286f;
+    color: white;
+    padding: 40px 20px;
+    border-top-right-radius: 100px; /* Adds the curve to the top-right corner */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adds space between sections */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between; /* Aligns sections horizontally */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 40px; /* Adds space between blocks */
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-info > div {
+    flex: 1; /* Ensures sections take equal space */
+    min-width: 250px; /* Maintains a minimum size for smaller screens */
+}
+
+.contact-info h2,
+.contact-info h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.contact-info p {
+    margin: 5px 0; /* Adds space between paragraphs */
+    line-height: 1.6; /* Improves readability */
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info ul li a:hover {
+    color: #ffd700; /* Changes color on hover for better interaction */
+}
+
+footer p {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px; /* Adjust for desired curve size */
+    height: 100px; /* Adjust for desired curve size */
+    background-color: #741b5e;
+    border-top-right-radius: 100px; /* Creates a smooth curve */
+    z-index: -1; /* Sends the curve behind the footer content */
+}

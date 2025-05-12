@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Control - LCSA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic reset and styling */
+        body, h1, h2, h3, p, ul {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .content {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: url('pictures/wall2.jpg');
+        }
+
+
+
+.images-carousel {
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: center;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carousel-track img {
+    width: 100%;
+    flex-shrink: 0;
+    border: none;
+}
+
+
+.features {
+    background: linear-gradient(135deg, #ffffff, #f9f9fc); /* Subtle gradient for depth */
+    padding: 30px;
+    border-radius: 16px;
+    border: 2px solid #b14d9b; /* Brand color for consistency */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); /* More pronounced shadow for elegance */
+    margin-top: 40px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.features:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Enhanced hover effect */
+    transform: translateY(-7px); /* Lift effect */
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 28px; /* Larger, more prominent heading */
+    color: #2a2a2a; /* Richer dark gray for readability */
+    font-weight: 800; /* Stronger emphasis */
+    letter-spacing: 1px; /* Slightly spaced letters for sophistication */
+    margin-bottom: 25px;
+    text-transform: uppercase; /* Professional text styling */
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    color: #3d3d3d; /* Neutral yet professional */
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.features li::before {
+    content: "▶"; /* Arrow to indicate clickable action */
+    color: #b14d9b; /* Accent color for visual alignment */
+    font-size: 20px;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.features li:hover::before {
+    transform: rotate(90deg); /* Rotate arrow to indicate interaction */
+}
+
+.features li .dropdown-content {
+    display: none;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #f9f9fc; /* Light background for dropdowns */
+    border: 1px solid #dedede; /* Subtle border */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer dropdown shadow */
+    font-size: 16px;
+    color: #4a4a4a; /* Muted text for dropdown content */
+    line-height: 1.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.features li.open .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.features li:hover {
+    color: #b14d9b; /* Branded hover effect */
+    transform: translateX(8px); /* Subtle interactivity */
+}
+
+.features li span {
+    display: block;
+    padding: 12px;
+    background: linear-gradient(135deg, #ffffff, #f3eaf8); /* Light gradient for detail */
+    border-radius: 8px;
+    border: 1px solid #e2e2e2;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.features li:hover span {
+    background-color: #f0e8f7; /* Consistent light purple feedback */
+    transform: translateY(-3px);
+}
+
+/* Add a tooltip-like instruction for better clarity */
+.features li::after {
+    content: "";
+    font-size: 14px;
+    color: #888;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.features li:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-5px);
+}
+
+
+/* General styling for sections */
+section {
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 12px;
+    background-color: #ffffff; /* Clean white background for professionalism */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    border-left: 6px solid #b14d9b; /* Decorative purple border on the left */
+    padding-left: 20px; /* Space between the content and border */
+}
+
+.why-choose-us h2 {
+    font-size: 28px;
+    color: #b14d9b; /* Branding color for the heading */
+    text-transform: uppercase; /* Professional uppercase styling */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.why-choose-us p {
+    font-size: 18px;
+    color: #555; /* Neutral gray for readability */
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.why-choose-us ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.why-choose-us li {
+    font-size: 18px;
+    color: #333; /* Slightly darker text for contrast */
+    margin-bottom: 10px;
+    padding-left: 30px; /* Space for decorative bullet */
+    position: relative;
+}
+
+.why-choose-us li::before {
+    content: "✔"; /* Decorative checkmark bullet */
+    color: #b14d9b; /* Matches the theme */
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Testimonials Section */
+.testimonials h2 {
+    font-size: 28px;
+    color: #b14d9b;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.testimonials blockquote {
+    font-size: 20px;
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9; /* Light gray background for quotes */
+    padding: 20px;
+    border-left: 6px solid #b14d9b; /* Decorative border for the blockquote */
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    line-height: 1.6;
+}
+
+.testimonials p {
+    font-size: 16px;
+    color: #444;
+    text-align: right; /* Align attribution to the right */
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Add decorative elements for better appeal */
+.testimonials blockquote::before {
+    content: "“"; /* Open quotation mark */
+    font-size: 40px;
+    color: #b14d9b;
+    position: absolute;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+.testimonials blockquote::after {
+    content: "”"; /* Close quotation mark */
+    font-size: 40px;
+    color: #b14d9b;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="hero access-control">
+        <div class="logo-nav">
+            <img src="pictures/Logo.png" alt="LCSA Logo" class="logo">
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="projects.html">Projects</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="overlay">
+            <h1>Access Control</h1>
+            <p>Monitoring and Managing Access to Your Property</p>
+        </div>
+    </header>
+
+
+    <section class="content">
+        <h2>About Access Control</h2>
+        <p>Our access control systems offer you the ability to manage and monitor who can enter and exit your premises. We provide a range of solutions including card-based systems, biometric identification, and mobile access control.</p>
+        <h3>Key Benefits</h3>
+        <ul>
+            <li>Enhanced security for businesses and homes</li>
+            <li>Biometric and card-based access</li>
+            <li>Real-time monitoring and control</li>
+            <li>Integration with CCTV and intercom systems</li>
+        </ul>
+    </section>
+
+    <div class="images-carousel">
+        <div class="carousel-track">
+            <img src="Pictures/Acess-controll.jpg" alt="Image 1">
+            <img src="Pictures/acess-controllll.jpg" alt="Image 2">
+            <img src="Pictures/Acesss-control.jpg" alt="Image 3">
+            <img src="Pictures/Acess-control3.jpg" alt="Image 4">
+            <img src="Pictures/Acesss-contro.jpg" alt="Image 5">
+        </div>
+    </div>
+
+    <section class="features">
+        <h2>Features of Our Access Control Systems</h2>
+        <ul>
+            <li>
+                Customizable access levels for different users
+                <div class="dropdown-content">
+                    Set different access permissions for employees, contractors, and visitors, ensuring only authorized personnel can access sensitive areas.
+                </div>
+            </li>
+            <li>
+                24/7 monitoring with real-time alerts
+                <div class="dropdown-content">
+                    Receive instant alerts for unauthorized access attempts or breaches, allowing quick response to potential security threats.
+                </div>
+            </li>
+            <li>
+                Remote access management via mobile app
+                <div class="dropdown-content">
+                    Manage access permissions and monitor activity from anywhere using our intuitive mobile application.
+                </div>
+            </li>
+            <li>
+                Audit trails for tracking access history
+                <div class="dropdown-content">
+                    Keep a detailed log of all access events, providing a clear audit trail for security reviews and compliance.
+                </div>
+            </li>
+            <li>
+                Seamless integration with existing security systems
+                <div class="dropdown-content">
+                    Easily integrate our access control systems with your current CCTV, alarm, and intercom systems for a comprehensive security solution.
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <p>At LCSA, we pride ourselves on delivering top-notch access control solutions tailored to meet the unique needs of our clients. Here’s why we stand out:</p>
+        <ul>
+            <li>Experienced and certified security professionals</li>
+            <li>State-of-the-art technology and equipment</li>
+            <li>Competitive pricing without compromising quality</li>
+            <li>Excellent customer service and support</li>
+        </ul>
+    </section>
+
+    <section class="testimonials">
+        <h2>Customer Testimonials</h2>
+        <blockquote>"LCSA's access control system has transformed the security of our office. The biometric system is incredibly reliable, and the support team is always helpful."</blockquote>
+        <p>- Derick Masungwini, Office Manager</p>
+        <blockquote>"We are extremely satisfied with the service provided by LCSA. The integration with our existing CCTV system was seamless."</blockquote>
+        <p>- Lorran Mcathy, Business Owner</p>
+    </section>
+
+    <footer class="contact">
+        <div class="contact-info">
+            <div>
+                <h2>Contact Us</h2>
+                <p>Phone: 061 437 5569 | WhatsApp: 071 841 2080</p>
+                <p>Email: schirindo@gmail.com</p>
+                <p>Address: 676 Gallagher Avenue, Unit Number 1, Gallagher Business Park, Midrand</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 LCSA - All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.features li').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+     
+</body>
+</html>

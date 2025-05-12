@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intercom Systems - LCSA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+
+/* Shared styles for .content, .installation, and .benefits */
+.content, .installation, .benefits {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+    background:  url('pictures/wall2.jpg') no-repeat center center / cover;
+}
+
+/* Specific styles for .intercom-types */
+/* General styles for intercom-types section */
+.intercom-types {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #030303;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.0);
+}
+
+.intercom-types h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Individual intercom type containers */
+.intercom-type {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intercom-type img {
+    max-width: 150px; /* Ensure uniform image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.intercom-type div {
+    flex: 1; /* Ensure text takes up the remaining space */
+}
+
+.intercom-type h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.intercom-type p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .intercom-type {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intercom-type img {
+        max-width: 100%; /* Adjust image size for smaller screens */
+    }
+
+    .intercom-type div {
+        margin-top: 15px;
+    }
+}
+
+
+
+/* Content Section */
+.content {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #dbd3d84b;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.content h2 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content p, .content ul {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #dbd3d84b;
+    border-left: 4px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Installation Section */
+.installation {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    text-align: left;
+}
+
+.installation h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.installation ol {
+    padding-left: 20px;
+    color: #555;
+}
+
+.installation ol li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #dbd3d84b;
+    border-left: 4px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.benefits h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.benefits ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.benefits ul li {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #dbd3d84b;
+    border-left: 4px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intercom-types .intercom-type {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.intercom-type img.placeholder-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+@media (max-width: 768px) {
+    .intercom-type {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="hero intercom">
+        <div class="logo-nav">
+            <img src="pictures/Logo.png" alt="LCSA Logo" class="logo">
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="overlay">
+            <h1>Intercom Systems</h1>
+            <p>Secure Communication Solutions for Your Property</p>
+        </div>
+    </header>
+
+    <section class="content">
+        <h2>About Intercom Systems</h2>
+        <p>Our intercom systems are designed to enhance communication within homes, businesses, or gated communities. Whether audio or video-based, our intercom solutions offer the perfect balance of convenience and security.</p>
+        
+        <h3>Why Choose Our Intercom Systems?</h3>
+        <p>With advanced technology and seamless integration, our intercom systems offer reliable, high-quality communication. Here’s why you should consider installing an intercom system:</p>
+        <ul>
+            <li><strong>Enhanced Security:</strong> Screen visitors and control access with video intercom options.</li>
+            <li><strong>Convenient Communication:</strong> Easily communicate across different areas of your property,acccess can be granted remotely via mobile devices e.g mobile phone ect..</li>
+            <li><strong>Remote Access:</strong> Access and control the intercom system through a mobile app.</li>
+            <li><strong>Integration Options:</strong> Integrates with other security systems for comprehensive protection.</li>
+        </ul>
+    </section>
+
+    <section class="intercom-types">
+        <h2>Types of Intercom Systems</h2>
+        
+        <div class="intercom-type">
+            <img src="Pictures/audio.jpg" alt="Audio Intercom" class="placeholder-image">
+            <div>
+                <h3>Audio Intercom Systems</h3>
+                <p>Audio intercom systems allow for clear voice communication between different areas. Ideal for businesses or homes where visual identification is not required.</p>
+            </div>
+        </div>
+        
+        <div class="intercom-type">
+            <img src="Pictures/video.jpg" alt="Video Intercom" class="placeholder-image">
+            <div>
+                <h3>Video Intercom Systems</h3>
+                <p>Video intercoms provide both visual and audio interaction, allowing users to see and talk to visitors before granting access.</p>
+            </div>
+        </div>
+    
+        <div class="intercom-type">
+            <img src="Pictures/wireless.jpg" alt="Wireless Intercom" class="placeholder-image">
+            <div>
+                <h3>Wireless Intercom Systems</h3>
+                <p>Wireless systems are easy to install and offer flexibility, making them a popular choice for locations without extensive wiring.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="installation">
+        <h2>Installation Process</h2>
+        <p>Our team ensures a smooth installation process, whether you're installing a single unit or an integrated network of intercoms.</p>
+        <ol>
+            <li><strong>Consultation:</strong> Assess your property to determine the ideal intercom system and placement.</li>
+            <li><strong>Customized Design:</strong> Design a tailored solution based on your specific needs and preferences.</li>
+            <li><strong>Installation:</strong> Professional setup to ensure optimal functionality and integration with other systems.</li>
+            <li><strong>Testing & Training:</strong> Thorough testing and training to help you maximize your intercom system's benefits.</li>
+        </ol>
+    </section>
+
+    <section class="benefits">
+        <h2>Benefits of Intercom Systems</h2>
+        <ul>
+            <li><strong>Improved Security:</strong> Monitor entrances and communicate with visitors.</li>
+            <li><strong>Convenience:</strong> Easy communication across different areas of the property.</li>
+            <li><strong>Cost-Efficiency:</strong> Reduces the need for multiple entry points or additional security staff.</li>
+        </ul>
+    </section>
+
+    <footer class="contact">
+        <div class="contact-info">
+            <div>
+                <h2>Contact Us</h2>
+                <p>Phone: 061 437 5569 | WhatsApp: 071 841 2080</p>
+                <p>Email: schirindo@gmail.com</p>
+                <p>Address: 676 Gallagher Avenue, Unit Number 1, Gallagher Business Park, Midrand</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 LCSA - All Rights Reserved</p>
+    </footer>
+</body>
+</html>

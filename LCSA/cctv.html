@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCSA - CCTV Cameras</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #444;
+            text-align: center;
+        }
+
+        .service-description, .features, .camera-types, .specifications {
+            text-align: center;
+        }
+
+        /* About CCTV Cameras Section */
+.service-description h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Key Features Section */
+.features h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features li {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.features li:hover {
+    transform: translateX(5px);
+    background-color: #f1f1f1;
+}
+
+.features li::before {
+    content: "✔️";
+    color: #4a90e2;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+        
+        .camera-types {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: url('Pictures/wall2.jpg');
+    margin: right; /* Ensures it touches both left and right margins */
+    padding: 20px; /* Optional: Add padding for spacing around content */
+    outline: 0px solid #cecbcbc9; /* Creates a white outline */
+    outline-offset: 0px; /* Pulls the outline closer to the element, removing any space */
+}
+
+.camera {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Camera Section */
+.camera {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f5f5, #ffffff);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.camera h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.camera p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #8b3a7e;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #357ab8;
+    transform: scale(1.05);
+}
+
+
+.camera img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+.camera div {
+    flex: 1;
+}
+
+.camera ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+@media (max-width: 768px) {
+    .camera {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+        /* Specifications Table */
+.specifications table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.specifications th, .specifications td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.specifications th {
+    background-color: #8b3a7e;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.specifications td {
+    background-color: #f9f9f9;
+}
+
+.specifications tr:hover td {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+.specifications th:first-child, 
+.specifications td:first-child {
+    border-top-left-radius: 8px;
+}
+
+.specifications th:last-child, 
+.specifications td:last-child {
+    border-top-right-radius: 8px;
+}
+
+
+    
+    </style>
+</head>
+<body>
+    <header class="hero cctv">
+        <div class="logo-nav">
+            <img src="pictures/Logo.png" alt="LCSA Logo" class="logo"> <!-- Placeholder for the logo -->
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="overlay">
+            <h1>CCTV Cameras</h1>
+            <p>Protect your property with the latest in surveillance technology.</p>
+        </div>
+    </header>
+
+    <!-- About CCTV Cameras Section -->
+    <section class="service-description">
+        <h2>About CCTV Cameras</h2>
+        <p>
+            LCSA provides state-of-the-art CCTV cameras designed to secure your property.
+            Our cameras offer high-definition recording, remote access, and motion detection, ensuring you have peace of mind.
+        </p>
+        <img src="pictures/hki_cams.png" alt="CCTV Cameras Overview" style="width: 80%; border-radius: 8px;"> <!-- Placeholder for overview image -->
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features">
+        <h2>Key Features and Benefits</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li>✔️ High-definition video recording for clear images.</li>
+            <li>✔️ Remote access via mobile app or computer.</li>
+            <li>✔️ Night vision for 24/7 monitoring.</li>
+            <li>✔️ Motion detection and instant alerts.</li>
+            <li>✔️ Easy installation with expert guidance.</li>
+        </ul>
+    </section>
+
+    <!-- Types of CCTV Cameras Section -->
+    
+    <section class="camera-types">
+        <h2>Types of CCTV Cameras</h2>
+    
+        <!-- Dome Camera -->
+        <div class="camera">
+            <img src="pictures/hki_cams.png" alt="Dome camera">
+            <div>
+                <h3>Dome Cameras</h3>
+                <p>Ideal for indoor use, dome cameras offer a wide-angle view and are often designed to blend with the surroundings, making them suitable for discreet monitoring in retail stores, restaurants, and offices. Their durable casing makes them resistant to vandalism.</p>
+                <ul>
+                    <li><strong>Wide Coverage:</strong> Effective for large indoor spaces.</li>
+                    <li><strong>Vandal-Resistant:</strong> Durable dome cover protects against tampering.</li>
+                    <li><strong>Discreet Design:</strong> Blends with indoor decor for subtle monitoring.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Bullet Camera -->
+        <div class="camera">
+            <img src="pictures/hki_cams.png" alt="Bullet camera">
+            <div>
+                <h3>Bullet Cameras</h3>
+                <p>Designed for outdoor use, bullet cameras offer a long-range field of view, making them suitable for monitoring perimeters, parking lots, and open spaces. Their shape is highly visible, which can act as a deterrent for criminal activity.</p>
+                <ul>
+                    <li><strong>Weatherproof:</strong> Built to withstand various weather conditions.</li>
+                    <li><strong>Long-Range Visibility:</strong> Captures clear images over long distances.</li>
+                    <li><strong>Deterrent Effect:</strong> Visible presence deters intruders.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- PTZ Camera -->
+        <div class="camera">
+            <img src="pictures/hki_cams.png" alt="PTZ camera">
+            <div>
+                <h3>PTZ Cameras</h3>
+                <p>Pan-Tilt-Zoom (PTZ) cameras provide maximum control, allowing users to pan horizontally, tilt vertically, and zoom in on specific details. This flexibility makes them ideal for monitoring large areas that require a high level of detail, such as stadiums, warehouses, and event spaces.</p>
+                <ul>
+                    <li><strong>Remote Control:</strong> Adjust the camera angle and zoom remotely.</li>
+                    <li><strong>High Flexibility:</strong> Covers wide areas with a single camera.</li>
+                    <li><strong>Zoom Capability:</strong> Focus on details without losing clarity.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="camera">
+            <p>Discover the perfect CCTV solution tailored to your needs. Contact us today to learn more!</p>
+            <a href="contact.html" class="cta-button">Enquire Now</a>
+        </div>
+        
+    
+    </section>
+    
+
+    <!-- Technical Specifications Section -->
+    <section class="specifications">
+        <h2>Reasons to Install Our Security Camera</h2>
+        <table>
+            <tr>
+                <th>Reason</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>High-Resolution Video</td>
+                <td>Capture clear footage with 1080p and 4K resolution options, ensuring you don’t miss any details.</td>
+            </tr>
+            <tr>
+                <td>Enhanced Night Vision</td>
+                <td>Monitor areas up to 100ft away in low light, keeping your property secure around the clock.</td>
+            </tr>
+            <tr>
+                <td>Remote Access</td>
+                <td>Access live video feeds anytime, anywhere, with our mobile app integration.</td>
+            </tr>
+            <tr>
+                <td>Flexible Storage Options</td>
+                <td>Choose between cloud or local storage to securely store your footage.</td>
+            </tr>
+            <tr>
+                <td>Easy Installation</td>
+                <td>Quick and hassle-free setup process, allowing you to secure your premises without delay.</td>
+            </tr>
+        </table>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer class="contact">
+        <div class="contact-info">
+            <div>
+                <h2>Contact Us</h2>
+                <p>Phone: 061 437 5569 | WhatsApp: 071 841 2080</p>
+                <p>Email: schirindo@gmail.com</p>
+                <p>Address: 676 Gallagher Avenue, Unit Number 1, Gallagher Business Park, Midrand</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 LCSA - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
